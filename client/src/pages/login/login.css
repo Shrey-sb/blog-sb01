@@ -1,0 +1,57 @@
+.login{
+    height: calc(100vh - 50px);
+    align-items: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: linear-gradient(
+        rgba(255,255,255,0.5),
+        rgba(255,255,255,0.5)
+        ),
+         url("https://storage.googleapis.com/gd-wagtail-prod-assets/original_images/Design-Guide-IO_3X2.png");
+    background-size: cover;
+}
+.loginTitle{
+    font-size: 50px;
+}
+.loginform{
+    margin-top:20px;
+    display: flex;
+    flex-direction: column;
+}
+.loginform > label{
+margin-top:20px;
+display: flex;
+flex-direction: column;
+}
+.logininput{
+    padding: 10px;
+    background-color: white;
+    border: none;
+
+}
+.loginButton{
+    margin-top:20px;
+    cursor: pointer;
+    background-color: lightcoral;
+    border: none;
+    color : white;
+    border-radius: 10px;
+    padding: 10px;
+}
+.loginButton:disabled{
+    cursor : not-allowed;
+    background-color: coral;
+}
+.loginregisterButton{
+    position: absolute;
+    top : 50px;
+    right : 20px;
+    background-color:teal;
+    cursor: pointer;
+    border: none;
+    color : white;
+    border-radius: 10px;
+    padding: 10px;
+}
