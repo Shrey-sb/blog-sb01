@@ -5,6 +5,7 @@ import axios from "axios"
 import { Link } from "react-router-dom"
 import { useContext } from "react";
 import { Context } from "../../context/Context";
+import { axiosInstance } from "../../config"
 const Singlepost = () => {
     const PF = "https://blog-sb01.herokuapp.com/images/";
     const { user } = useContext(Context);
@@ -18,7 +19,7 @@ const Singlepost = () => {
     const [post, setpost] = useState({});
     useEffect(() => {
         const getpost = async () => {
-            const res = await axios.get("/posts/" + path);
+            const res = await axiosInstance.get("/posts/" + path);
             setpost(res.data);
             setTitle(res.data.title);
             setDesc(res.data.desc);
@@ -28,7 +29,7 @@ const Singlepost = () => {
 
     const handleclick = async () => {
         try {
-            await axios.delete("/posts/" + path, { data: { username: user.username }, });
+            await axiosInstance.delete("/posts/" + path, { data: { username: user.username }, });
             window.location.replace("/");
         } catch (err) {
 
@@ -37,7 +38,7 @@ const Singlepost = () => {
     }
     const handleupdate = async () => {
         try {
-            await axios.put("/posts/" + path, {  username: user.username,title,desc, });
+            await axiosInstance.put("/posts/" + path, {  username: user.username,title,desc, });
             setupdatemode(false);
             } catch (err) {
 
