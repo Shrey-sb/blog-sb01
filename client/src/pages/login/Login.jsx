@@ -1,6 +1,6 @@
 import "./login.css"
 import {
-    BrowserRouter as Link,
+    Link,
 } from "react-router-dom";
 import { useContext, useRef } from "react";
 import { Context } from "../../context/Context";

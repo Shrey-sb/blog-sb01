@@ -6,7 +6,7 @@ import { Link } from "react-router-dom"
 import { useContext } from "react";
 import { Context } from "../../context/Context";
 const Singlepost = () => {
-    const PF = "http://localhost:5000/images/";
+    const PF = "https://blog-sb01.herokuapp.com/images/";
     const { user } = useContext(Context);
 
     const [title, setTitle] = useState("");

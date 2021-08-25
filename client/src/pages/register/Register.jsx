@@ -1,6 +1,6 @@
 import "./register.css"
 import {
-    BrowserRouter as Link,
+    Link,
 } from "react-router-dom";
 import { useState } from "react"
 import axios from "axios"
